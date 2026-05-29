@@ -1,52 +1,50 @@
 # Personal Website — GitHub Pages
 
-Website cá nhân tĩnh cho nhà nghiên cứu, gồm phần **Công bố** chia **3 cột** theo 3 hướng nghiên cứu.
+Static personal site for researchers, with **Publications** in **3 columns** (one per research area), plus **Education** and **Industrial Experience** sections.
 
-## Cấu trúc thư mục
+## Project structure
 
 ```
 .
-├── index.html          # Nội dung chính — chỉnh sửa tại đây
-├── css/style.css       # Giao diện
-├── js/main.js          # Menu mobile, năm footer
+├── index.html          # Main content — edit here
+├── css/style.css       # Styles
+├── js/main.js          # Mobile menu, footer year
 ├── assets/
-│   └── photo.svg       # Ảnh mẫu — thay bằng photo.jpg của bạn
+│   └── photo.svg       # Placeholder — replace with photo.jpg
 └── README.md
 ```
 
-## Chỉnh sửa nội dung
+## Editing content
 
-1. Mở `index.html` và thay toàn bộ placeholder: tên, email, bio, ORCID, địa chỉ.
-2. Đổi tiêu đề 3 hướng nghiên cứu ở cả section **Hướng nghiên cứu** và **Công bố khoa học** (3 cột phải trùng tên).
-3. Thêm/xóa bài báo: copy block `<li class="pub-item">...</li>` trong cột tương ứng.
-4. Ảnh đại diện: đặt file `assets/photo.jpg`, rồi trong `index.html` đổi:
+1. Open `index.html` and replace placeholders: name, email, bio, ORCID, address.
+2. Update **Education** and **Industrial Experience** timeline entries (`<li class="cv-entry">...</li>`).
+3. Rename the three **Research Area** column headers under Publications and add papers per column.
+4. Profile photo: add `assets/photo.jpg` and update:
    ```html
-   <img src="assets/photo.jpg" alt="Tên của bạn" ... />
+   <img src="assets/photo.jpg" alt="Your Name" ... />
    ```
 
-## Xem trước trên máy
+## Local preview
 
 ```bash
-cd /đường/dẫn/tới/1.PersonalWebsite
+cd /path/to/1.PersonalWebsite
 python3 -m http.server 8080
 ```
 
-Mở trình duyệt: http://localhost:8080
+Open http://localhost:8080 in your browser.
 
 ---
 
-## Deploy miễn phí lên GitHub Pages
+## Deploy free on GitHub Pages
 
-### Bước 1: Tạo repository trên GitHub
+### Step 1: Create a GitHub repository
 
-1. Đăng nhập [GitHub](https://github.com).
+1. Sign in to [GitHub](https://github.com).
 2. **New repository**:
-   - **User site** (khuyên dùng): tên repo = `yourusername.github.io` → URL: `https://yourusername.github.io`
-   - **Project site**: tên bất kỳ (vd. `personal-website`) → URL: `https://yourusername.github.io/personal-website/`
+   - **User site** (recommended): repo name `yourusername.github.io` → `https://yourusername.github.io`
+   - **Project site**: any name (e.g. `personal-website`) → `https://yourusername.github.io/personal-website/`
 
-### Bước 2: Đẩy code lên GitHub
-
-Trong thư mục project (thay `yourusername` và tên repo):
+### Step 2: Push code
 
 ```bash
 git init
@@ -57,40 +55,29 @@ git remote add origin https://github.com/yourusername/yourusername.github.io.git
 git push -u origin main
 ```
 
-### Bước 3: Bật GitHub Pages
+### Step 3: Enable GitHub Pages
 
-1. Vào repo trên GitHub → **Settings** → **Pages**.
-2. **Source**: Deploy from a branch.
-3. **Branch**: `main` / folder **`/ (root)`**.
-4. **Save**. Sau 1–3 phút site có tại URL ở bước 1.
+1. Repo → **Settings** → **Pages**
+2. **Source**: Deploy from a branch
+3. **Branch**: `main` / folder **`/ (root)`**
+4. **Save** — the site is live in 1–3 minutes.
 
-### Project site (repo không phải `username.github.io`)
-
-Nếu repo tên `personal-website`, sau khi bật Pages URL là:
-
-`https://yourusername.github.io/personal-website/`
-
-Không cần sửa đường dẫn CSS/JS vì dùng đường dẫn tương đối (`css/`, `js/`, `assets/`).
-
-### Cập nhật sau này
+### Updates
 
 ```bash
-# Sửa index.html hoặc css/style.css
 git add .
 git commit -m "Update publications"
 git push
 ```
 
-GitHub Pages tự build lại trong vài phút.
-
 ---
 
-## Gợi ý
+## Tips
 
-- Domain riêng: **Settings → Pages → Custom domain**.
-- Xuất publication từ Google Scholar / BibTeX rồi copy vào từng cột thủ công (đơn giản, không cần build tool).
-- Nếu cần song ngữ Việt/Anh, có thể nhân đôi section hoặc thêm trang `en.html` sau.
+- Custom domain: **Settings → Pages → Custom domain**
+- Import publications from Google Scholar or BibTeX and paste into each column manually
+- Relative paths (`css/`, `js/`, `assets/`) work for both user and project sites
 
 ## License
 
-Nội dung website thuộc bạn. Code template dùng tự do cho mục đích cá nhân.
+Your site content is yours. Template code is free for personal use.
