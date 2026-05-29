@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal website — Researcher portfolio" />
+  <title>Your Name — Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-logo" href="#home">Your Name</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#research">Nghiên cứu</a></li>
+        <li><a href="#publications">Công bố</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / About -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-photo">
+          <!-- Thay src bằng ảnh của bạn: assets/photo.jpg -->
+          <img src="assets/photo.svg" alt="Ảnh đại diện" width="220" height="220" />
+        </div>
+        <div class="hero-text">
+          <h1>Your Name</h1>
+          <p class="hero-title">Nhà nghiên cứu · [Chức danh / Đơn vị]</p>
+          <p class="hero-bio">
+            Tôi là nhà nghiên cứu tại <strong>[Tên viện / trường]</strong>, quan tâm đến
+            <em>[lĩnh vực chính]</em>. Website này tổng hợp thông tin, hướng nghiên cứu và các công bố khoa học của tôi.
+          </p>
+          <div class="hero-links">
+            <a href="mailto:your.email@university.edu">Email</a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Giới thiệu</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              [Viết 2–3 đoạn về bản thân: học vấn, vị trí hiện tại, mục tiêu nghiên cứu,
+              kinh nghiệm làm việc hoặc hợp tác quốc tế.]
+            </p>
+            <p>
+              Ví dụ: Tôi nhận bằng Tiến sĩ từ [University] năm [YYYY], với luận án về
+              [chủ đề]. Hiện tôi làm việc tại [Lab/Department] với trọng tâm vào
+              [mô tả ngắn].
+            </p>
+          </div>
+          <aside class="about-aside">
+            <h3>Thông tin nhanh</h3>
+            <dl>
+              <dt>Vị trí</dt>
+              <dd>Postdoctoral Researcher / Assistant Professor</dd>
+              <dt>Đơn vị</dt>
+              <dd>Department of X, University Y</dd>
+              <dt>Địa điểm</dt>
+              <dd>City, Country</dd>
+              <dt>ORCID</dt>
+              <dd><a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">0000-0000-0000-0000</a></dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section section-alt">
+      <div class="container">
+        <h2>Hướng nghiên cứu</h2>
+        <p class="section-lead">
+          Ba trụ cột chính trong công việc nghiên cứu của tôi — tương ứng với ba cột trong phần Công bố bên dưới.
+        </p>
+        <div class="research-cards">
+          <article class="research-card">
+            <span class="research-num">01</span>
+            <h3>Hướng nghiên cứu 1</h3>
+            <p>
+              [Mô tả ngắn: ví dụ Machine Learning cho dữ liệu y sinh, mô hình dự đoán,
+              học có giám sát/yếu giám sát…]
+            </p>
+          </article>
+          <article class="research-card">
+            <span class="research-num">02</span>
+            <h3>Hướng nghiên cứu 2</h3>
+            <p>
+              [Mô tả ngắn: ví dụ Computer Vision, phân đoạn ảnh y khoa, phát hiện bất thường…]
+            </p>
+          </article>
+          <article class="research-card">
+            <span class="research-num">03</span>
+            <h3>Hướng nghiên cứu 3</h3>
+            <p>
+              [Mô tả ngắn: ví dụ NLP, trích xuất thông tin từ văn bản lâm sàng…]
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications: 3 columns = 3 research directions -->
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Công bố khoa học</h2>
+        <p class="section-lead">
+          Danh sách công bố được nhóm theo ba hướng nghiên cứu. Bài mới nhất đặt trên cùng mỗi cột.
+        </p>
+
+        <div class="pub-columns">
+          <!-- Column 1 -->
+          <div class="pub-column">
+            <header class="pub-column-header">
+              <h3>Hướng nghiên cứu 1</h3>
+              <p class="pub-column-sub">[Từ khóa / lĩnh vực phụ]</p>
+            </header>
+            <ol class="pub-list">
+              <li class="pub-item">
+                <span class="pub-year">2025</span>
+                <p class="pub-title">
+                  <a href="#" target="_blank" rel="noopener">Title of Your Paper One</a>
+                </p>
+                <p class="pub-authors">Your Name, Co-author A, Co-author B</p>
+                <p class="pub-venue"><em>Journal / Conference Name</em>, vol. X, pp. Y–Z.</p>
+                <p class="pub-links">
+                  <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">DOI</a>
+                </p>
+              </li>
+              <li class="pub-item">
+                <span class="pub-year">2024</span>
+                <p class="pub-title">
+                  <a href="#" target="_blank" rel="noopener">Another Paper in Direction 1</a>
+                </p>
+                <p class="pub-authors">Your Name, et al.</p>
+                <p class="pub-venue"><em>Conference Abbreviation</em> 2024.</p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="pub-column">
+            <header class="pub-column-header">
+              <h3>Hướng nghiên cứu 2</h3>
+              <p class="pub-column-sub">[Từ khóa / lĩnh vực phụ]</p>
+            </header>
+            <ol class="pub-list">
+              <li class="pub-item">
+                <span class="pub-year">2025</span>
+                <p class="pub-title">
+                  <a href="#" target="_blank" rel="noopener">Title of Paper in Direction 2</a>
+                </p>
+                <p class="pub-authors">Your Name, Co-author C</p>
+                <p class="pub-venue"><em>IEEE Transactions on …</em></p>
+                <p class="pub-links"><a href="#">PDF</a> · <a href="#">DOI</a></p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="pub-column">
+            <header class="pub-column-header">
+              <h3>Hướng nghiên cứu 3</h3>
+              <p class="pub-column-sub">[Từ khóa / lĩnh vực phụ]</p>
+            </header>
+            <ol class="pub-list">
+              <li class="pub-item">
+                <span class="pub-year">2023</span>
+                <p class="pub-title">
+                  <a href="#" target="_blank" rel="noopener">Title of Paper in Direction 3</a>
+                </p>
+                <p class="pub-authors">Your Name, Co-author D, Co-author E</p>
+                <p class="pub-venue"><em>Workshop / Journal</em> 2023.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container container-narrow">
+        <h2>Liên hệ</h2>
+        <p>
+          Nếu bạn quan tâm đến hợp tác nghiên cứu hoặc trao đổi học thuật, vui lòng gửi email:
+        </p>
+        <p class="contact-email">
+          <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+        </p>
+        <p class="contact-address">
+          [Department Name]<br />
+          [University / Institute]<br />
+          [Street, City, Postal Code, Country]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
