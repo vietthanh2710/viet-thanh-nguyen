@@ -379,8 +379,15 @@ img {
 }
 
 .pub-authors {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.15rem;
   font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.pub-note {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-style: italic;
   color: var(--color-text-muted);
 }
 
@@ -388,6 +395,69 @@ img {
   margin: 0 0 0.5rem;
   font-size: 0.88rem;
   color: var(--color-text-muted);
+}
+
+/* Spotlight / workshop callout (aligned with RoboWorM project page) */
+.venue {
+  --wm-accent: #1f8a5b;
+  --wm-ink: #1a1d1b;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.65rem 0.9rem 0.65rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--wm-accent) 8%, #fff);
+  border: 1px solid color-mix(in srgb, var(--wm-accent) 35%, transparent);
+  border-left: 4px solid var(--wm-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.venue b {
+  color: var(--wm-accent);
+  font-weight: 700;
+}
+
+.venue-meta {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.workshop-title {
+  display: inline;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.05em;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.workshop-title .wt-lead {
+  color: var(--wm-ink);
+}
+
+.workshop-title .wt-accent {
+  color: var(--wm-accent);
+}
+
+.workshop-title .wt-accent i {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.workshop-title:hover {
+  text-decoration: none;
+}
+
+.workshop-title:hover .wt-lead {
+  color: var(--wm-ink);
+}
+
+.workshop-title:hover .wt-accent {
+  color: #166a46;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .pub-links {
@@ -442,6 +512,10 @@ img {
 
   .pub-thumb {
     max-width: 320px;
+  }
+
+  .workshop-title {
+    white-space: normal;
   }
 }
 
